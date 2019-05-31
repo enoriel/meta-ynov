@@ -7,3 +7,6 @@
 
     URI: https://github.com/meta-qt5/meta-qt5.git
     branch: thud
+    
+    URI: http://git.yoctoproject.org/cgit/cgit.cgi/meta-ti
+    branch: thud
