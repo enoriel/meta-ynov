@@ -1,0 +1,16 @@
+# POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  /media/enoriel/Toshiba/Yocto/poky-thud/meta \
+  /media/enoriel/Toshiba/Yocto/poky-thud/meta-poky \
+  /media/enoriel/Toshiba/Yocto/poky-thud/meta-yocto-bsp \
+  /meta-openembedded/meta-oe \
+  ${HOME}/poky-thud/meta-openembedded/meta-networking \
+  ${HOME}/poky-th${HOME}ud/meta-openembedded/meta-python \
+  /home/enoriel/git/meta-ynov/workspace \
+  "
