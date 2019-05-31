@@ -1,0 +1,4 @@
+SANITY_VERSION 1
+TMPDIR /home/enoriel/git/meta-ynov/tmp
+SSTATE_DIR /home/enoriel/git/meta-ynov/sstate-cache
+NATIVELSBSTRING debian-9
