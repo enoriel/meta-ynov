@@ -1,4 +1,4 @@
-# meta-ynov
+# Meta-Ynov
     URI: git://git.yoctoproject.org/poky.git
     branch: thud
 
