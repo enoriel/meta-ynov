@@ -49,12 +49,11 @@
 #            SRC_URI += "file://feature.scc"
 #
 
-inherit kernel
-require recipes-kernel/linux/linux-yocto.inc
+require ${THISDIR}/linux-bbb.inc
 
 SRC_URI = "git://github.com/enoriel/linux-bbb.git;protocol=git;nocheckout=1;name=machine"
 
-LINUX_VERSION ?= "4.14.0-rc3"
+LINUX_VERSION ?= "4.19"
 LINUX_VERSION_EXTENSION_append = "-ynov"
 
 SRCREV_machine= "d81fa669e3de7eb8a631d7d95dac5fbcb2bf9d4e"
@@ -101,4 +100,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7 \
                     file://drivers/net/LICENSE.SRC;md5=e5e50f92b87d827b29e6e79e05432963 \
                     file://drivers/net/wireless/marvell/libertas/LICENSE;md5=4ea603c400089f5e404cc5e453d17bc5 \
                     file://drivers/staging/rtl8192e/license;md5=39aad0f4df1a741c8567b6bb87644f65"
+
+# Adding kernel device tree
+KERNEL_DEVICETREE ?= " \
+    am335x-boneblack-wireless.dtb \
+"
 

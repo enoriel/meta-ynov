@@ -2,7 +2,7 @@ SUMMARY = "Yocto distribution with basic Qt5 for Smart Greenhouse"
 HOMEPAGE = "http://bordeaux.ynov.com"
 
 IMAGE_FEATURES += "package-management"
-IMAGE_LINGUAS = "en-us"
+IMAGE_LINGUAS = "fr-fr"
 
 inherit image
 
@@ -21,6 +21,7 @@ WIFI_SUPPORT = " \
     crda \
     iw \
     linux-firmware-wl18xx \
+    wlconf \
     wpa-supplicant \
 "
 
@@ -76,7 +77,6 @@ EXTRA_TOOLS_INSTALL = " \
     parted \
     procps \
     rng-tools \
-    sysfsutils \
     tcpdump \
     tree \
     unzip \
@@ -114,11 +114,9 @@ QT_TOOLS = " \
     qtdeclarative \
     qtquickcontrols \
     qtquickcontrols2 \
-    libconnman-qt5 \
     qtscript \
     qtsvg \
     qtsvg-plugins \
-    qtxmlpatterns \
     qtdeclarative-qmlplugins \
     qtquickcontrols-qmlplugins \
     qtquickcontrols2-qmlplugins \
@@ -146,7 +144,6 @@ IMAGE_INSTALL += " \
     ${QT_DEV_TOOLS} \
     ${QT_TOOLS} \
     ${TSLIB} \
-    ntp \
     psplash \
     smartgreenhouse \
 "

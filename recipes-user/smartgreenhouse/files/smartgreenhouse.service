@@ -1,0 +1,12 @@
+[Unit]
+Description=Autostart SmartGreenHouse
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+After=phytec-node-server.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/SmartGreenHouse
+
+[Install]
+WantedBy=multi-user.target
