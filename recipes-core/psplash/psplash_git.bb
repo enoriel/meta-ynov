@@ -23,5 +23,3 @@ inherit autotools
 # Specify any options you want to pass to the configure script using EXTRA_OECONF:
 EXTRA_OECONF = ""
 
-EXTRAPATHS_prepend := "${THISDIR}/files"
-

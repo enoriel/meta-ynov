@@ -2,7 +2,7 @@ SUMMARY = "Yocto distribution with basic Qt5 for Smart Greenhouse"
 HOMEPAGE = "http://bordeaux.ynov.com"
 
 IMAGE_FEATURES += "package-management"
-IMAGE_LINGUAS = "fr-fr"
+#IMAGE_LINGUAS = "fr_fr"
 
 inherit image
 
@@ -23,6 +23,8 @@ WIFI_SUPPORT = " \
     linux-firmware-wl18xx \
     wlconf \
     wpa-supplicant \
+    firewall \
+    init-ifupdown \
 "
 
 DEV_SDK_INSTALL = " \
@@ -110,10 +112,12 @@ QT_DEV_TOOLS = " \
 QT_TOOLS = " \
     qtbase \
     qtbase-plugins \
+    qt5-env \
     qtserialport \
     qtdeclarative \
     qtquickcontrols \
     qtquickcontrols2 \
+    qtx11extras \
     qtscript \
     qtsvg \
     qtsvg-plugins \

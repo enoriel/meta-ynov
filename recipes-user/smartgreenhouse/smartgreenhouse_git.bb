@@ -15,26 +15,34 @@ SRC_URI += " \
 
 # Modify these as desired
 PV = "1.0+git${SRCPV}"
-SRCREV = "f2fac26ba5c0b0b95cf229d69f4099f22424099d"
+SRCREV = "3670d5b4354e02f5cc845f235ece3095083b7b22"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = "qtbase qtserialport qtdeclarative"
+DEPENDS =   "qtbase \
+            qtserialport \
+            qtdeclarative \
+            qtquickcontrols2 \
+            qtquickcontrols \
+            qtvirtualkeyboard \
+"
 
 PACKAGECONFIG ?= ""
 PACKAGECONFIG[desktop] = "-DDESKTOP_BUILD,,"
 
 SYSTEMD_SERVICE_${PN} = "${PN}.service"
 
-inherit qmake5 systemd
+
 
 do_install() {
     install -d ${D}${datadir}/${P}
     install -Dm 0644 ${WORKDIR}/${PN}.service ${D}${systemd_system_unitdir}/${PN}.service
-    #install -m 0755 ${B}/SmartGreenHouse ${D}${datadir}/${P}
-    cp -R --no-dereference --preserve=mode,links ${S}/* ${D}${datadir}/${P}
+    install -d ${D}/opt/smartgreenhouse/bin/
+    cp -R --no-dereference --preserve=mode,links ${S}/* ${D}${P}
 }
 
-FILES_${PN} += "${datadir}"
+FILES_${PN} += "/opt/smartgreenhouse/bin/"
 
 INITSCRIPT_NAME = "smartgreenhouse"
+
+inherit qmake5 systemd

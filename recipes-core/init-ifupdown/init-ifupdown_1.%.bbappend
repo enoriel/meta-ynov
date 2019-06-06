@@ -1,0 +1,3 @@
+LICENSE="CLOSED"
+
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
