@@ -75,7 +75,7 @@ EXTRA_TOOLS_INSTALL = " \
     nano \
     netcat-openbsd \
     nmap \
-    ntp ntp-tickadj \
+    ntp \
     parted \
     procps \
     rng-tools \
