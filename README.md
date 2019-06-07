@@ -24,6 +24,7 @@ You need to configure the file build/conf/local.conf and add:
     MACHINE ?= "beaglebone"
 
 Then your build/conf/bblayers.conf and configure like this (if you follow the example):
+
     BBLAYERS ?= " \
     ~/poky-thud/meta \
     ~/poky-thud/meta-poky \
