@@ -18,7 +18,6 @@
     ~/poky-thud$ git clone -b thud git://git.openembedded.org/meta-openembedded
     ~/poky-thud$ git clone -b thud https://github.com/meta-qt5/meta-qt5.git
     ~/poky-thud$ git clone -b thud https://github.com/enoriel/meta-ynov
-    ~/poky-thud$ source oe-init-build-env ../build
 
 You need to configure the file build/conf/local.conf and add:
     MACHINE ?= "beaglebone"
@@ -36,3 +35,9 @@ Then your build/conf/bblayers.conf and configure like this (if you follow the ex
     ~/poky-thud/meta-qt5 \
     ~/poky-thud/meta-ynov \
     "
+
+Once your done modifying the bblayers.conf you can build your image
+
+    ~/poky-thud$ source oe-init-build-env ../build
+    ~/build$ bitbake qt5-image
+
